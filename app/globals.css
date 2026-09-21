@@ -8,46 +8,49 @@
    Ruhig, hochwertig, minimalistisch. Orientierung an moderner
    Apple-Klarheit: großzügige Abstände, gedämpfte Neutraltöne,
    ein zurückhaltender Akzentfarbton, klare Typografie.
+
+   Farbwelt: warmes Sand/Beige als Basis, Dunkelblau als
+   alleiniger Akzent – elegant, warm, ruhig.
    ============================================================ */
 :root {
   --radius: 0.75rem;
 
-  /* Neutralpalette – bewusst warm-neutral statt kalt-grau */
-  --background: oklch(0.99 0 0);
-  --foreground: oklch(0.18 0.01 260);
+  /* Neutralpalette – warmes Sand/Beige */
+  --background: oklch(0.975 0.008 85);
+  --foreground: oklch(0.22 0.014 85);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 260);
+  --card: oklch(0.995 0.005 85);
+  --card-foreground: oklch(0.22 0.014 85);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 260);
+  --popover: oklch(0.995 0.005 85);
+  --popover-foreground: oklch(0.22 0.014 85);
 
-  /* Zurückhaltender Akzent (gedämpftes Blau, keine Effekthascherei) */
-  --primary: oklch(0.47 0.12 258);
+  /* Akzent: Dunkelblau, zurückhaltend eingesetzt */
+  --primary: oklch(0.28 0.08 258);
   --primary-foreground: oklch(0.98 0 0);
 
-  --secondary: oklch(0.96 0.003 260);
-  --secondary-foreground: oklch(0.24 0.01 260);
+  --secondary: oklch(0.94 0.012 85);
+  --secondary-foreground: oklch(0.26 0.014 85);
 
-  --muted: oklch(0.96 0.003 260);
-  --muted-foreground: oklch(0.5 0.01 260);
+  --muted: oklch(0.94 0.012 85);
+  --muted-foreground: oklch(0.5 0.012 85);
 
-  --accent: oklch(0.95 0.01 258);
-  --accent-foreground: oklch(0.24 0.01 260);
+  --accent: oklch(0.91 0.016 85);
+  --accent-foreground: oklch(0.26 0.014 85);
 
   --destructive: oklch(0.55 0.19 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.91 0.003 260);
-  --input: oklch(0.91 0.003 260);
-  --ring: oklch(0.47 0.12 258 / 0.4);
+  --border: oklch(0.88 0.014 85);
+  --input: oklch(0.88 0.014 85);
+  --ring: oklch(0.28 0.08 258 / 0.4);
 
   /* Statusfarben – dezent, konsistent für alle Bereiche
      (z.B. Wartungsfälligkeit, Prüfstatus, Versicherungsfristen) */
   --status-ok: oklch(0.6 0.13 155);
   --status-warning: oklch(0.75 0.14 80);
   --status-critical: oklch(0.58 0.19 25);
-  --status-neutral: oklch(0.6 0.01 260);
+  --status-neutral: oklch(0.6 0.012 85);
 
   --font-sans:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
@@ -72,74 +75,74 @@
  * Beide definieren identische Werte, um Divergenz zu vermeiden.
  */
 .dark {
-  --background: oklch(0.16 0.01 260);
-  --foreground: oklch(0.96 0.003 260);
+  --background: oklch(0.17 0.012 85);
+  --foreground: oklch(0.96 0.01 85);
 
-  --card: oklch(0.19 0.01 260);
-  --card-foreground: oklch(0.96 0.003 260);
+  --card: oklch(0.21 0.014 85);
+  --card-foreground: oklch(0.96 0.01 85);
 
-  --popover: oklch(0.19 0.01 260);
-  --popover-foreground: oklch(0.96 0.003 260);
+  --popover: oklch(0.21 0.014 85);
+  --popover-foreground: oklch(0.96 0.01 85);
 
-  --primary: oklch(0.72 0.11 258);
-  --primary-foreground: oklch(0.16 0.01 260);
+  --primary: oklch(0.62 0.1 258);
+  --primary-foreground: oklch(0.14 0.01 258);
 
-  --secondary: oklch(0.24 0.01 260);
-  --secondary-foreground: oklch(0.96 0.003 260);
+  --secondary: oklch(0.26 0.014 85);
+  --secondary-foreground: oklch(0.96 0.01 85);
 
-  --muted: oklch(0.24 0.01 260);
-  --muted-foreground: oklch(0.65 0.01 260);
+  --muted: oklch(0.26 0.014 85);
+  --muted-foreground: oklch(0.66 0.012 85);
 
-  --accent: oklch(0.26 0.02 258);
-  --accent-foreground: oklch(0.96 0.003 260);
+  --accent: oklch(0.28 0.017 85);
+  --accent-foreground: oklch(0.96 0.01 85);
 
   --destructive: oklch(0.65 0.19 25);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(1 0 0 / 0.08);
-  --input: oklch(1 0 0 / 0.12);
-  --ring: oklch(0.72 0.11 258 / 0.4);
+  --border: oklch(1 0 0 / 0.09);
+  --input: oklch(1 0 0 / 0.13);
+  --ring: oklch(0.62 0.1 258 / 0.4);
 
   --status-ok: oklch(0.7 0.13 155);
   --status-warning: oklch(0.8 0.14 80);
   --status-critical: oklch(0.68 0.19 25);
-  --status-neutral: oklch(0.65 0.01 260);
+  --status-neutral: oklch(0.66 0.012 85);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
-    --background: oklch(0.16 0.01 260);
-    --foreground: oklch(0.96 0.003 260);
+    --background: oklch(0.17 0.012 85);
+    --foreground: oklch(0.96 0.01 85);
 
-    --card: oklch(0.19 0.01 260);
-    --card-foreground: oklch(0.96 0.003 260);
+    --card: oklch(0.21 0.014 85);
+    --card-foreground: oklch(0.96 0.01 85);
 
-    --popover: oklch(0.19 0.01 260);
-    --popover-foreground: oklch(0.96 0.003 260);
+    --popover: oklch(0.21 0.014 85);
+    --popover-foreground: oklch(0.96 0.01 85);
 
-    --primary: oklch(0.72 0.11 258);
-    --primary-foreground: oklch(0.16 0.01 260);
+    --primary: oklch(0.62 0.1 258);
+    --primary-foreground: oklch(0.14 0.01 258);
 
-    --secondary: oklch(0.24 0.01 260);
-    --secondary-foreground: oklch(0.96 0.003 260);
+    --secondary: oklch(0.26 0.014 85);
+    --secondary-foreground: oklch(0.96 0.01 85);
 
-    --muted: oklch(0.24 0.01 260);
-    --muted-foreground: oklch(0.65 0.01 260);
+    --muted: oklch(0.26 0.014 85);
+    --muted-foreground: oklch(0.66 0.012 85);
 
-    --accent: oklch(0.26 0.02 258);
-    --accent-foreground: oklch(0.96 0.003 260);
+    --accent: oklch(0.28 0.017 85);
+    --accent-foreground: oklch(0.96 0.01 85);
 
     --destructive: oklch(0.65 0.19 25);
     --destructive-foreground: oklch(0.98 0 0);
 
-    --border: oklch(1 0 0 / 0.08);
-    --input: oklch(1 0 0 / 0.12);
-    --ring: oklch(0.72 0.11 258 / 0.4);
+    --border: oklch(1 0 0 / 0.09);
+    --input: oklch(1 0 0 / 0.13);
+    --ring: oklch(0.62 0.1 258 / 0.4);
 
     --status-ok: oklch(0.7 0.13 155);
     --status-warning: oklch(0.8 0.14 80);
     --status-critical: oklch(0.68 0.19 25);
-    --status-neutral: oklch(0.65 0.01 260);
+    --status-neutral: oklch(0.66 0.012 85);
   }
 }
 
