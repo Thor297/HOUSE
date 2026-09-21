@@ -2,14 +2,10 @@ import { redirect } from "next/navigation";
 import { Home } from "lucide-react";
 
 import { createClient } from "@/lib/supabase/server";
-import { LoginForm } from "@/components/auth/login-form";
+import { SignupForm } from "@/components/auth/signup-form";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default async function LoginPage() {
-  // Bereits eingeloggte Nutzer sollen /login nicht sehen, auch wenn sie
-  // die URL direkt aufrufen (die Middleware lässt sie hier bewusst
-  // durch, siehe lib/supabase/middleware.ts). Kein Loop: /dashboard
-  // redirected nie zurück auf /login, solange ein Nutzer eingeloggt ist.
+export default async function SignupPage() {
   const supabase = await createClient();
   const {
     data: { user },
@@ -25,10 +21,10 @@ export default async function LoginPage() {
         <div className="mb-2 flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
           <Home className="size-5" />
         </div>
-        <CardTitle>Mein Haus</CardTitle>
-        <CardDescription>Melde dich mit deinem Konto an</CardDescription>
+        <CardTitle>Konto erstellen</CardTitle>
+        <CardDescription>Für &bdquo;Mein Haus&ldquo; registrieren</CardDescription>
       </CardHeader>
-      <LoginForm />
+      <SignupForm />
     </Card>
   );
 }

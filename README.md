@@ -74,8 +74,9 @@ Am einfachsten über den **SQL Editor** im Supabase-Dashboard (kein CLI-Setup n�
 2. Öffne `supabase/migrations/00000000000001_schema.sql` aus dem Projekt, kopiere den gesamten Inhalt, füge ihn im SQL Editor ein, klicke **Run**.
 3. Wiederhole denselben Vorgang für `supabase/migrations/00000000000002_rls.sql`.
 4. Wiederhole denselben Vorgang für `supabase/migrations/00000000000003_storage.sql`.
+5. Wiederhole denselben Vorgang für `supabase/migrations/00000000000004_profiles.sql` (Phase 1: Nutzerprofile + Haushalts-Erstellung).
 
-**Wichtig:** Reihenfolge exakt einhalten (`...0001` vor `...0002` vor `...0003`), da spätere Dateien auf den Tabellen der vorherigen aufbauen.
+**Wichtig:** Reihenfolge exakt einhalten (`...0001` vor `...0002` vor `...0003` vor `...0004`), da spätere Dateien auf den Tabellen der vorherigen aufbauen.
 
 Alternative für später (optional, benötigt die Supabase CLI):
 ```bash
@@ -161,15 +162,21 @@ Trage diese URL zusätzlich in Supabase unter **Authentication → URL Configura
 
 ---
 
-## 13. Erste Anmeldung 🔵 (steht erst nach Phase 1 zur Verfügung)
+## 13. Erste Anmeldung 🔵
 
-Die tatsächliche Anmeldefunktion (E-Mail/Passwort) ist noch nicht implementiert – aktuell zeigt `/login` nur eine Platzhalterseite. Dieser Schritt wird nach Abschluss von Phase 1 relevant.
+Die Anmeldefunktion ist jetzt vollständig implementiert:
+
+1. Öffne die App (lokal `http://localhost:3000` oder deine Vercel-URL) und klicke auf „Registrieren".
+2. Name (optional), E-Mail und Passwort (mind. 8 Zeichen) eingeben.
+3. Je nach Supabase-Einstellung (siehe Schritt 6) wirst du entweder direkt weitergeleitet oder musst zunächst eine Bestätigungsmail öffnen.
 
 ---
 
-## 14. Household anlegen 🔵 (steht erst nach Phase 1 zur Verfügung)
+## 14. Household anlegen 🔵
 
-Ebenfalls Teil von Phase 1: Nach der ersten Anmeldung legst du deinen Haushalt an und wirst automatisch als `owner` eingetragen. Weitere Haushaltsmitglieder kannst du danach unter „Einstellungen → Haushalt" einladen (Rollen: `owner`, `admin`, `member`, `read_only`).
+Nach der ersten Anmeldung wirst du automatisch zu „Haushalt anlegen" weitergeleitet, falls du noch keinem Haushalt angehörst. Vergib einen Namen (z.B. „Familie Müller") – du wirst automatisch als `owner` eingetragen.
+
+Weitere Mitglieder lädst du danach unter **„Einstellungen → Haushalt"** (Zahnrad-Symbol oben rechts) per E-Mail-Adresse ein. Rollen (`owner`, `admin`, `member`, `read_only`) lassen sich dort direkt ändern, Mitglieder auch wieder entfernen.
 
 ---
 
